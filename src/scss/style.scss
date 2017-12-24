@@ -1,1 +1,291 @@
 // Main Sass File
+
+$black: rgba(0,0,0,1);
+$white: rgba(255,255,255,1);
+$color-accent: #003B33;
+$overlay-color: rgba(0,0,0,0.8);
+$overlay-color-light: rgba(0,0,0,0.3);
+$header-bg-color: rgba(0,0,0,0.9);
+$text-color-light: $white;
+$text-color-dark: $black;
+
+
+// Set global font family:
+* {
+	font-family: 'Voltaire', sans-serif;
+
+}
+
+
+section {
+	border-top: 2px solid $color-accent;
+}
+
+// redefine button color
+
+.btn-primary {
+	background-color: $color-accent;
+	border:0;
+}
+
+
+.navbar {
+	background-color: $header-bg-color;
+
+	.nav-item__active {
+		border: 2px solid $text-color-light;
+	}
+
+	.nav-link {
+		color: $text-color-light;
+	}
+
+	.navbar-toggler-icon {
+		color:$text-color-light;
+	}
+}
+
+
+.homepage-header {
+	background: url("/img/coffee-splash.jpeg");
+	min-height: 700px;
+	background-size: cover;
+	background-attachment: fixed;
+	color:$text-color-light;
+
+	.overlay {
+		width:100%;
+		position: absolute;
+		left:0;
+		top:0;
+		min-height: 700px;
+		background-color: $overlay-color;
+
+		.homepage-header__inner {
+			padding-top:150px;
+
+			.homepage-header__title-row {
+				border-bottom:1px solid $text-color-light;
+
+				.logo {
+					
+					.logo-icon {
+						color:$text-color-dark;
+						background-color: $white;
+						border:2px solid $color-accent;
+						padding:25px;
+						border-radius:50%;
+					}
+				}
+
+				.homepage-header__title {
+					color: $text-color-light;
+					vertical-align: middle;
+
+					span {
+						padding:10px;
+						border:2px solid $text-color-light;
+						display: inline-block;
+					}
+				}
+
+			}
+
+			.homepage-header__address {
+					color: $text-color-light;
+					font-size: 30px;
+				}
+
+			.btn {
+				font-size: 20px;
+			}
+		}
+	}
+
+}
+
+
+// Homepage horizontal text&image sections:
+
+.homepage-horizontal-bar__image {
+	background-repeat: no-repeat;
+	background-size: cover;	
+}
+
+.homepage-horizontal-bar__text, .homepage-horizontal-bar__image {
+	min-height:400px;
+}
+
+
+.homepage__welcome-section {
+
+	.homepage-horizontal-bar__image {
+		background-image: url("../img/coffee-pour.jpeg");
+	}
+}
+
+
+.homepage__menu-section {
+	
+	.homepage-horizontal-bar__image {
+		background-image: url("../img/coffee-mugs.jpeg");
+	}
+
+}
+
+
+
+
+// parallax section
+.parallax-section {
+	min-height:400px;
+	position:relative;
+	background: url("../img/coffee-bar.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+
+	.overlay {
+		background-color: $overlay-color;
+		position: absolute;
+		width:100%;
+		top:0;
+		left:0;
+		min-height:400px;
+	}
+
+	.parallax__text-overlay {
+		color:$text-color-light;
+		font-size: 20px;
+		width:50%;
+		margin:auto;
+		margin-top:50px;
+		// border:2px solid $color-accent;
+
+	}
+}
+
+
+// Footer
+footer {
+	background-color:$black;
+	color: $text-color-light;
+
+	.footer__column {
+		
+		font-size: 20px;
+
+		.social-icon {
+			font-size:35px;
+
+		}
+	}
+}
+
+
+
+// MastHead for non-home pages
+.masthead {
+	min-height: 300px;
+	position: relative;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;		
+
+		.overlay {
+			width:100%;
+			position: absolute;
+			left:0;
+			top:0;
+			min-height: 300px;
+			background-color: $overlay-color;
+
+			.masthead__title {
+				margin-top: 100px;
+				color:$text-color-light;
+				font-size:40px;
+
+				span {
+					border: 2px solid $text-color-light;
+					display: inline-block;
+				}
+			}
+		}
+	
+}
+
+.masthead--menu {
+	background-image: url("../img/coffee-sandwich.jpeg");
+}
+
+.masthead--contact {
+	background-image: url("../img/coffee-phone.jpeg");
+	background-position: bottom left;
+}
+
+
+//Menu section on the menu page
+.menu-section {
+	
+	.menu-section__header-bar {
+		background-color: $black;
+		color:$text-color-light;
+	}
+
+	.menu-section__menu-item {
+		border-bottom:1px solid rgba(0,0,0,0.3);
+		margin-bottom: 10px;
+	}
+}
+
+
+//Contact page
+.contact-address {
+
+	.contact-address__addressbox {
+		.contact-address__address-text {
+			font-size:20px;
+		}
+	}
+	.contact-address__mapbox {
+		min-height: 400px;
+		background-image: url("../img/map.png");
+
+		.contact-address__map-overlay {
+			background-color: $overlay-color-light;
+			position: absolute;
+			width:100%;
+			top:0;
+			left:0;
+			min-height:400px;
+		}
+	}
+
+}
+
+.contact-form {
+	font-size:20px;
+	min-height: 500px;
+	background-image: url("../img/coffee-steam.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+
+	.contact-form__form-wrapper {
+		background-color: $overlay-color;
+	}
+
+	label, h2 {
+		color:$text-color-light;
+	}
+
+	input, textarea {
+		color: $text-color-dark;
+	}
+	
+	button {
+		display:block;
+		margin: auto;
+		font-size: 22px;
+	}
+}
